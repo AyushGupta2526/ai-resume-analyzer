@@ -40,7 +40,7 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
                         <img src="/images/pdf.png" alt="pdf" className="size-10" />
                         <div className="flex items-center space-x-3">
                             <div>
-                                <p className="text-lg text-gray-700 font-medium truncate max-w-xs">
+                                <p className="text-sm text-gray-700 font-medium truncate max-w-xs">
                                     {file.name}
                                 </p>
                                 <p className="text-sm text-gray-500">
@@ -57,10 +57,10 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
                     
                 ) : (
                     <div>
-                        <div className="mx-auto w-16 h-16 flex item-center justify-center mb-2">
+                        <div className="mx-auto w-16 h-16 flex items-center justify-center mb-2">
                             <img src="/icons/info.svg" alt="upload" className="size-20" />
                         </div>
-                        <p className="text-lg text-gra-500">
+                        <p className="text-lg text-gray-500">
                             <span className="font-semibold">
                                 Click to Upload
                             </span> or Drag or Drop
