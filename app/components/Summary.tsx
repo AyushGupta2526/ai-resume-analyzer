@@ -3,7 +3,7 @@ import ScoreGauge from './ScoreGauge'
 import ScoreBadge from './ScoreBadge';
 
 const Category = ({title, score}: {title: string, score: number}) => {
-  const textColor = score >= 70 ? 'text-green-600' : score >= 49 ? 'text-yellow-600' : 'text-red-600';
+  const textColor = score > 70 ? 'text-green-600' : score > 49 ? 'text-yellow-600' : 'text-red-600';
 
   return (
     <div className='resume-summary'>
@@ -13,7 +13,7 @@ const Category = ({title, score}: {title: string, score: number}) => {
           <ScoreBadge score={score} />
         </div>
         <p className='text-2xl'>
-          <span className='{textColor}'></span>
+          <span className={textColor}>{score}</span>/100
         </p>
       </div>
     </div>
