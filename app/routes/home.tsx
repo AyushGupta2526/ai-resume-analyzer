@@ -20,7 +20,7 @@ export default function Home() {
 
     useEffect(() => {
       if (!auth.isAuthenticated) navigate('/auth?next=/');
-    }, [auth.isAuthenticated]}
+    }, [auth.isAuthenticated]);
 
     useEffect(() => {
         const loadResumes = async () => {
@@ -36,7 +36,7 @@ export default function Home() {
       setLoadingResumes(false);
       }
 
-      loadResume();
+      loadResumes();
     }, []);
 
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
@@ -45,7 +45,7 @@ export default function Home() {
     <section className="main-section">
       <div className="page-heading py-16">
         <h1>Track Your Applications & Resume Ratings</h1>
-        {!loadingResumes && resumes?.length === 0 ? (
+        {!loadingResumes && resumes.length === 0 ? (
         <h2>Review your submissions and check AI-powered feedback.</h2>
         ) : (
         <h2>Review your submissions and check AI-powered feedback.</h2>
@@ -70,6 +70,7 @@ export default function Home() {
             <Link to="/upload" className="primary-button w-fit text-xl font-semibold">
               Upload Resume
             </Link>
+          </div>
           )}
     </section>
   </main>
